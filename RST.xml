@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="RST">
+  <template name="link" value="`$text$ &lt;http://$url$&gt;`_" description="inline link" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="text" alwaysStopAt="true" />
+    <variable name="url" expression="" defaultValue="address" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="code" value=".. code:: $language$&#10;&#10;    $END$" description="insert code block" toReformat="false" toShortenFQNames="true">
+    <variable name="language" expression="" defaultValue="python" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="h1" value="***************&#10;$chapter_title$&#10;***************&#10;&#10;$END$" description="chapter section" toReformat="false" toShortenFQNames="true">
+    <variable name="chapter_title" expression="" defaultValue="Chapter title" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="h2" value="$section_title$&#10;===============&#10;&#10;$END$" description="section" toReformat="false" toShortenFQNames="true">
+    <variable name="section_title" expression="" defaultValue="section title" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="h3" value="$subsection_title$&#10;------------------&#10;&#10;$END$" description="subsection" toReformat="false" toShortenFQNames="true">
+    <variable name="subsection_title" expression="" defaultValue="subsection title" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="h4" value="$subsubsection_title$&#10;^^^^^^^^^^^^^^^^^^^^^&#10;&#10;$END$" description="subsubsection" toReformat="false" toShortenFQNames="true">
+    <variable name="subsubsection_title" expression="" defaultValue="subsubsection title" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="refi" value=":ref:`$ref_title$ &lt;ref-$ref_name$&gt;` $END$" description="insert inline reference link" toReformat="false" toShortenFQNames="true">
+    <variable name="ref_title" expression="" defaultValue="ref title" alwaysStopAt="true" />
+    <variable name="ref_name" expression="" defaultValue="ref_name" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="ref" value=".. _ref-$ref_name$:&#10;&#10;$END$" description="create reference" toReformat="false" toShortenFQNames="true">
+    <variable name="ref_name" expression="" defaultValue="ref_name" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="e" value="*$text$* $END$" description="emphasis" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="se" value="**$text$** $END$" description="strong emphasis" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="lit" value="``$text$`` $END$" description="literal" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="list" value="* $item1$ &#10;* $item2$&#10;* $item3$" description="start bullet list" toReformat="false" toShortenFQNames="true">
+    <variable name="item1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="listn" value="1. $item1$ &#10;2. $item2$&#10;3. $item3$" description="start numbered list" toReformat="false" toShortenFQNames="true">
+    <variable name="item1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="listan" value="$start$. $item1$ &#10;#. $item2$&#10;#. $item3$" description="start autonumbered list" toReformat="false" toShortenFQNames="true">
+    <variable name="start" expression="" defaultValue="1" alwaysStopAt="true" />
+    <variable name="item1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="def" value="$term$&#10;    $END$" description="definition" toReformat="false" toShortenFQNames="true">
+    <variable name="term" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="linki" value="`$link_title$ &lt;http://$address$&gt;`_ $END$" description="insert inline link" toReformat="false" toShortenFQNames="true">
+    <variable name="link_title" expression="" defaultValue="link title" alwaysStopAt="true" />
+    <variable name="address" expression="" defaultValue="address" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="img" value=".. image:: $path_to_img$ $END$" description="insert image" toReformat="false" toShortenFQNames="true">
+    <variable name="path_to_img" expression="" defaultValue="path/to/image" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="imga" value=".. image:: $path_to_img$ $END$&#10;    :height: $height$px&#10;    :width: $width$px&#10;    :scale: $scale$%&#10;    :alt: $alt_text$&#10;    :align: $align$&#10;    &#10;$END$" description="insert image, all options" toReformat="false" toShortenFQNames="true">
+    <variable name="path_to_img" expression="" defaultValue="path/to/image" alwaysStopAt="true" />
+    <variable name="height" expression="" defaultValue="320" alwaysStopAt="true" />
+    <variable name="width" expression="" defaultValue="240" alwaysStopAt="true" />
+    <variable name="scale" expression="" defaultValue="100" alwaysStopAt="true" />
+    <variable name="alt_text" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="align" expression="" defaultValue="center" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="fig" value=".. fig:: $path_to_img$ &#10;&#10;    $legend$" description="insert figure" toReformat="false" toShortenFQNames="true">
+    <variable name="path_to_img" expression="" defaultValue="path/to/image" alwaysStopAt="true" />
+    <variable name="legend" expression="" defaultValue="legend" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="note" value=".. note::  &#10;&#10;    $text$" description="insert note admonition" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="warn" value=".. warning::  &#10;&#10;    $text$" description="insert warning admonition" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tip" value=".. tip::  &#10;&#10;    $text$" description="insert tip admonition" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="err" value=".. err::  &#10;&#10;    $text$" description="insert err admonition" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="hint" value=".. hint::  &#10;&#10;    $text$" description="insert hint admonition" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="quote" value=".. epigraph::  &#10;&#10;    $text$&#10;    &#10;    -- $author$&#10;    &#10;$END$" description="insert quote" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="author" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
+
