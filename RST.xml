@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="RST">
   <template name="link" value="`$text$ &lt;http://$url$&gt;`_" description="inline link" toReformat="false" toShortenFQNames="true">
     <variable name="text" expression="" defaultValue="text" alwaysStopAt="true" />
@@ -7,7 +6,7 @@
       <option name="OTHER" value="true" />
     </context>
   </template>
-  <template name="code" value=".. code:: $language$&#10;&#10;    $END$" description="insert code block" toReformat="false" toShortenFQNames="true">
+  <template name="code" value=".. code:: $language$&#10;    :linenos:&#10;    :emphasize-lines: 1&#10;&#10;    $END$" description="insert code block" toReformat="false" toShortenFQNames="true">
     <variable name="language" expression="" defaultValue="python" alwaysStopAt="true" />
     <context>
       <option name="OTHER" value="true" />
@@ -168,4 +167,3 @@
     </context>
   </template>
 </templateSet>
-

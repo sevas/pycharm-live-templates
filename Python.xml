@@ -1,0 +1,96 @@
+<templateSet group="Python">
+  <template name="pf" value="print &quot;$string$&quot;.format($args$)&#10;$END$" description="print formatted string" toReformat="false" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="se" value="self.$var$ = $var$&#10;$END$" description="set instance variable" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="en" value="enumerate($SELECTION$)" description="enumerate(...)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ap" value="parser = argparse.ArgumentParser(prog='$name$', description='$desc$')&#10;parser.add_argument('-V', '--version', action='version', version='%(prog)s {0})'.format($version$))&#10;parser.add_argument('-q', '--quiet',  action='store_true', help='Shows minimal output in console')" description="create an argparser" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="desc" expression="" defaultValue="&quot;descr&quot;" alwaysStopAt="true" />
+    <variable name="version" expression="" defaultValue="&quot;version.__version__&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="apaddb" value="$parser$.add_argument('$short$', '$long$', action='store_true', required=True, help=&quot;$descr$&quot;)&#10;$END$&#10;" description="add a boolean command line flag" toReformat="false" toShortenFQNames="true">
+    <variable name="parser" expression="completeSmart()" defaultValue="&quot;parser&quot;" alwaysStopAt="true" />
+    <variable name="short" expression="" defaultValue="&quot;-s&quot;" alwaysStopAt="true" />
+    <variable name="long" expression="" defaultValue="&quot;--long-opt&quot;" alwaysStopAt="true" />
+    <variable name="descr" expression="" defaultValue="&quot;descr&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="apadds" value="$parser$.add_argument('$short$', '$long$', action='store', required=True, default='', help=&quot;$descr$&quot;)&#10;$END$" description="add a string command line argument" toReformat="false" toShortenFQNames="true">
+    <variable name="parser" expression="completeSmart()" defaultValue="&quot;parser&quot;" alwaysStopAt="true" />
+    <variable name="short" expression="" defaultValue="&quot;-s&quot;" alwaysStopAt="true" />
+    <variable name="long" expression="" defaultValue="&quot;--long-opt&quot;" alwaysStopAt="true" />
+    <variable name="descr" expression="" defaultValue="&quot;descr&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="apsub" value="subparsers = $parser$.add_subparsers(dest='subcommand')&#10;&#10;$sub$_command = subparsers.add_parser('$sub$')&#10;" description="create subparsers for an argparse parser" toReformat="false" toShortenFQNames="true">
+    <variable name="parser" expression="completeSmart()" defaultValue="parser" alwaysStopAt="true" />
+    <variable name="sub" expression="" defaultValue="sub" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="trace" value="import pdb; pdb.set_trace()" description="set pdb break here" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="version" value="VERSION_MAJOR = $X$&#10;VERSION_MINOR = $Y$&#10;VERSION_PATCH = $Z$&#10;VERSION_EXTRA = &quot;$EXTRA$&quot;&#10;&#10;__version__ = &quot;%s.%s.%s&quot; % (VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH)&#10;__loose_version__ = &quot;%s.%s&quot; % (VERSION_MAJOR, VERSION_MINOR)&#10;&#10;if VERSION_EXTRA:&#10;    __version__ = &quot;%s-%s&quot; % (__version__, VERSION_EXTRA)&#10;    __version_info__ = (VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, float('inf'))&#10;else:&#10;    __version_info__ = (VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH)&#10;&#10;__all__ = [__version__, __loose_version__, __version_info__]&#10;" description="Content for version.py file" toReformat="false" toShortenFQNames="true">
+    <variable name="X" expression="" defaultValue="0" alwaysStopAt="true" />
+    <variable name="Y" expression="" defaultValue="1" alwaysStopAt="true" />
+    <variable name="Z" expression="" defaultValue="0" alwaysStopAt="true" />
+    <variable name="EXTRA" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="utf8" value="# -*- coding: utf-8 -*-" description="set python source encoding to utf-8" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="defc" value="@classmethod&#10;def $name$(cls, $arg$):&#10;    &quot;&quot;&quot;$doc$&quot;&quot;&quot;&#10;    $END$" description="define class method" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="doc" expression="" defaultValue="&quot;short description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="defm" value="def $name$(self, $arg$):&#10;    &quot;&quot;&quot;$doc$&quot;&quot;&quot;&#10;    $END$" description="define method" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="doc" expression="" defaultValue="&quot;short description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="defs" value="@staticmethod&#10;def $name$($arg$):&#10;    &quot;&quot;&quot;$doc$&quot;&quot;&quot;&#10;    $END$" description="define method" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="doc" expression="" defaultValue="&quot;short description&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>

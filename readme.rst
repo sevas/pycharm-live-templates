@@ -4,6 +4,7 @@ What is this?
 Pycharm 3 live templates for:
 
 * RestructuredText (``RST.xml``)
+* Python (``Python.xml``)
 
 
 These should work with other intellij-based IDE, but I did not test it.
